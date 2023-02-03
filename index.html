@@ -16,9 +16,13 @@
 
 </head>
 <body>
-  <!-- <header class="header">
-    <img src="./assets/images/logo.svg" alt="product-logo">
-    <nav>
+  <header class="header">
+    <img class="logo" src="./assets/images/logo.svg" alt="product-logo">
+
+    <button aria-label="open navigation" class="open-nav"><img src="./assets/images/icon-menu.svg" alt="open navigation button"></button>
+
+    <nav class="nav navigation-open">
+      <button aria-label="close navigation" class="close-nav"><img src="./assets/images/icon-menu-close.svg" alt="close navigation button"></button>
       <ul class="nav-list">
         <li class="nav-item">Home</li>
         <li class="nav-item">New</li>
@@ -27,7 +31,7 @@
         <li class="nav-item">Categories</li>
       </ul>
     </nav>
-  </header> -->
+  </header>
 
   <main class="main">
     <section class="main-section">
@@ -90,5 +94,7 @@
       </article>
     </section>
   </main>
+
+  <script src="./script.js"></script>
 </body>
 </html>

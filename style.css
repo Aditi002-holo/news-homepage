@@ -23,8 +23,7 @@ body {
 }
 
 header, main, footer {
-    /* change it later */
-    margin: 0.5em 1em;
+    margin: 0 1em;
 }
 
 /* Typography */
@@ -41,6 +40,96 @@ p {
 
 a {
     font-size: 0.8rem;
+}
+
+/* Header - Navigation Section */
+
+.header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+
+@media(min-width: 600px) {
+    .header {
+        margin-top: 3.5em;
+        margin-bottom: 2em;
+    }
+
+    header, main, footer {
+        margin: 0 1.5em;
+    }
+}
+
+.logo {
+    width: 3em;
+}
+
+.nav {
+    position: fixed;
+    background: #fff;
+    width: 70%;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    transform: translateX(0);
+    transition: transform 250ms;
+}
+
+.navigation-open {
+    transform: translateX(-100%);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 1.5em;
+
+    min-height: 100vh;
+    list-style-type: none;
+    padding-left: 2em;
+    padding-top: 10em;
+}
+
+.nav-item {
+    font-size: 0.9rem;
+    color: var(--Very-dark-blue);
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    /* for > 600px screen */
+    /* color: var(--Dark-grayish-blue); */
+} 
+
+.close-nav {
+    border: 0;
+    background: 0;
+    color: var(--black);
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    cursor:pointer;
+    margin: 1em 0;
+
+    position: absolute;
+    right: 10%;
+}
+
+.open-nav {
+    border: 0;
+    background: 0;
+    color: var(--black);
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    cursor:pointer;
+    margin-left: auto;
 }
 
 /* Main Section */
@@ -143,4 +232,13 @@ a {
     font-size: 1.2rem;
     font-weight: 800;
     margin: 0.5em 0;
+}
+
+/* MEDIA QUERIES */
+
+@media(min-width: 500px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
